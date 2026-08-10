@@ -1,0 +1,17 @@
+.intro {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-6);
+}
+
+.headerLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.headerRight {
+    width: fit-content;
+}
+

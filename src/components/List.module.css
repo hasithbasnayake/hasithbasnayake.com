@@ -1,0 +1,11 @@
+.caseStudyList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.listSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}

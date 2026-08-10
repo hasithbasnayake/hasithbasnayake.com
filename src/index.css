@@ -1,3 +1,61 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url('public/fonts/inter-var.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url('public/fonts/geist-var.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --text-header: #202020;
   --text-body: #646464;
@@ -8,10 +66,10 @@
 
   --font-header: 24px;
   --font-body: 14px;
-  --line-height-header: 150%;
-  --line-height-body: 160%;
+  --line-height-header: 1.5;
+  --line-height-body: 1.6;
   --weight-header: 500;
-  --weight-body: 400;
+  --weight-body: 500;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -27,15 +85,26 @@
 
   color: var(--text-body);
   background: var(--background);
-  font-family: var(--sans);
-  font-size: var(--font-body);
-  font-weight: var(--line-height-header);
-
-
   color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+}
+
+p {
+  font-family: var(--sans);
+  font-size: var(--font-body);
+  line-height: var(--line-height-body);
+  color: var(--text-body);
+  font-weight: var(--weight-body);
+}
+
+h1 {
+  font-family: var(--heading);
+  font-size: var(--font-header);
+  line-height: var(--line-height-header);
+  color: var(--text-header);
+  font-weight: var(--weight-header);
 }
