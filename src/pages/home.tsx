@@ -21,7 +21,6 @@ const post_metadata = [{
     url: "https://www.creativecommons.com/",
 }];
 
-
 export default function Home () {
     return (
         <>
