@@ -1,11 +1,11 @@
+import type {Metadata} from "./types.ts";
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "This is a test post",
     description: "This is a test description",
     date: "09.09.09",
     category: "blog",
-    slug: "this-is-a-test-post",
-};
+}
 
 export default function TestPost () {
     return(
