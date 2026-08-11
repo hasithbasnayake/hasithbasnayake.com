@@ -4,19 +4,19 @@ import List from "../components/list.tsx";
 const post_metadata = [{
     title: "Creating photoshop with WebAssembly",
     description: "WebAssembly and C++",
-    data: "09.08.26",
+    date: "09.08.26",
     category: "Blog",
     url: "https://www.creativecommons.com/",
 }, {
     title: "Creating a B-tree",
     description: "B-trees",
-    data: "09.10.26",
+    date: "09.10.26",
     category: "Projects",
     url: "https://www.creativecommons.com/",
 }, {
     title: "Creating A*",
     description: "A* for pathfinding",
-    data: "09.12.26",
+    date: "09.12.26",
     category: "Album",
     url: "https://www.creativecommons.com/",
 }];

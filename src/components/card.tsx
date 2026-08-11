@@ -3,7 +3,7 @@ import styles from "./Card.module.css";
 interface CaseStudy {
     title: string;
     description: string;
-    data: string;
+    date: string;
     category: string;
     url: string;
 
@@ -21,7 +21,7 @@ export default function Card ({study}: CardProps) {
                     <p className={styles.headerText}>{study.title}</p>
                     <p>{study.description}</p>
                 </div>
-                <p>{study.data}</p>
+                <p>{study.date}</p>
             </div>
             <div className={styles.divider}></div>
         </div>

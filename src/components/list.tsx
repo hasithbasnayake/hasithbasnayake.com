@@ -13,7 +13,7 @@ import styles from "./List.module.css"
 interface CaseStudy {
     title: string;
     description: string;
-    data: string;
+    date: string;
     category: string;
     url: string;
 
@@ -27,9 +27,7 @@ interface ListProps {
 export default function List ({case_studies}: ListProps) {
     const [filter, setFilter] = useState("All");
 
-    const filteredCases =
-        filter === "All"
-        ? case_studies : case_studies.filter(study => study.category === filter);
+    const filteredCases = filter === "All" ? case_studies : case_studies.filter(study => study.category === filter);
 
     const listedCases = filteredCases.map(study =>
         <Card study={study}/>
