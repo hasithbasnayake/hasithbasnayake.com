@@ -1,4 +1,13 @@
+.post {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 600px) 1fr;
+}
+
+.toc {
+    grid-column: 1;
+}
 .postPage {
+    grid-column: 2;
     display: flex;
     flex-direction: column;
 }

@@ -2,29 +2,9 @@ import styles from "./Home.module.css";
 import List from "../components/list.tsx";
 import {PostList} from "../content/index.tsx";
 
-// const post_metadata = [{
-//     title: "Creating photoshop with WebAssembly",
-//     description: "WebAssembly and C++",
-//     date: "09.08.26",
-//     category: "Blog",
-//     url: "https://www.creativecommons.com/",
-// }, {
-//     title: "Creating a B-tree",
-//     description: "B-trees",
-//     date: "09.10.26",
-//     category: "Projects",
-//     url: "https://www.creativecommons.com/",
-// }, {
-//     title: "Creating A*",
-//     description: "A* for pathfinding",
-//     date: "09.12.26",
-//     category: "Album",
-//     url: "https://www.creativecommons.com/",
-// }];
-
 export default function Home () {
     return (
-        <>
+        <div className={styles.home}>
             <header className={styles.intro}>
                 <div className={styles.headerLeft}>
                     <h1>Building for human and machine intelligence.</h1>
@@ -39,6 +19,6 @@ export default function Home () {
             <section>
                 <List postList={PostList}/>
             </section>
-        </>
+        </div>
     );
 }
