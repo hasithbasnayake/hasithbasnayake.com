@@ -75,9 +75,9 @@ button {
 }
 
 :root {
-  --stagger-step: 70ms;
-  --stagger-duration: 1000ms;
-  --stagger-max: 12;
+  --stagger-step: 110ms;
+  --stagger-duration: 1100ms;
+  --stagger-max: 6;
 
   --text-header: #202020;
   --text-body: #646464;
@@ -116,14 +116,14 @@ button {
 }
 
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(18px); }
+  from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: none; }
 }
 
 [data-stagger] {
-  animation: fade-up var(--stagger-duration) cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: fade-up var(--stagger-duration) cubic-bezier(0.33, 1, 0.68, 1) both;
   animation-delay: calc(
-          min(var(--slot) + var(--offset), var(--stagger-max)) * var(--step)
+          min(var(--slot) + var(--offset), var(--stagger-max)) * var(--stagger-step)
   );
 }
 

@@ -17,18 +17,18 @@ interface ListProps {
     startAt?: number;
 }
 
-export default function List ({postPreviewList, startAt = 0}: ListProps) {
+export default function List ({postPreviewList, startAt = 2}: ListProps) {
     const [filter, setFilter] = useState("All");
 
     const filteredPostPreviewList = filter === "All" ? postPreviewList : postPreviewList.filter(post => post.frontmatter.category === filter);
 
-    const renderedPostPreviewList = filteredPostPreviewList.map(post =>
+    const renderedPostPreviewList = filteredPostPreviewList.map((post, i) =>
         <Card frontmatter={post.frontmatter} slug={post.slug} style={slot(i + 1)}/>
     );
 
     return (
-        <div className={styles.listSection} style={{offset(startAt)}}>
-            <Filter filter={filter} setFilter={setFilter} style={{slot(0)}}/>
+        <div className={styles.listSection} style={offset(startAt)}>
+            <Filter filter={filter} setFilter={setFilter} style={slot(0)}/>
             <div className={styles.caseStudyList}>
                 {renderedPostPreviewList}
             </div>

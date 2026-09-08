@@ -11,7 +11,7 @@ interface FilterProps {
 export default function Filter ({filter, setFilter, style}: FilterProps) {
 
     return (
-        <div className={styles.filterSection} data-stagger style={{style}}>
+        <div className={styles.filterSection} data-stagger style={style}>
             <div className={styles.buttonGroup}>
                 <button className={`${styles.filterButton} ${filter === "All" ? styles.selected : ""}`} onClick={() => setFilter("All")}>All</button>
                 <button className={`${styles.filterButton} ${filter === "Blog" ? styles.selected : ""}`} onClick={() => setFilter("Blog")}>Blog</button>
