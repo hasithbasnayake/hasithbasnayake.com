@@ -1,15 +1,15 @@
-import type {Metadata} from "../types.ts";
+import type {PageFrontmatter} from "../types.ts";
 
-export const metadata: Metadata = {
+export const frontmatter: PageFrontmatter = {
     title: "Building a relational database from scratch, serialization and caching layers",
     description: "This is a test description",
     author: "Hasith Basnayake",
     toc: [{
         id: "caching",
-        name: "Caching",
+        label: "Caching",
     }, {
         id: "indexing",
-        name: "Indexing",
+        label: "Indexing",
     },
     ],
     date: "09.09.09",

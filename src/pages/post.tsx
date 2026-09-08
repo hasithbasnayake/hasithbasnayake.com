@@ -18,20 +18,20 @@ export default function Post () {
         return (
             <div className={styles.post}>
                 <div className={styles.toc}>
-                    <TableOfContents tableofcontents={post.metadata.toc}/>
+                    <TableOfContents tableofcontents={post.frontmatter.toc}/>
                 </div>
                 <section className={styles.postPage}>
                     <div className={styles.postContent}>
                         <div className={styles.title}>
                             <p className={styles.headerText}>
-                                {post.metadata.title}
+                                {post.frontmatter.title}
                             </p>
-                            <div className={styles.titleMetadata}>
-                                <p className={styles.contentMetadata}>
-                                    {post.metadata.author}
+                            <div className={styles.titleFrontmatter}>
+                                <p className={styles.contentFrontmatter}>
+                                    {post.frontmatter.author}
                                 </p>
-                                <p className={styles.contentMetadata}>
-                                    {post.metadata.date}
+                                <p className={styles.contentFrontmatter}>
+                                    {post.frontmatter.date}
                                 </p>
                             </div>
                             <div className={styles.divider}></div>

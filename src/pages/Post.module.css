@@ -24,7 +24,7 @@
     gap: var(--space-2);
 }
 
-.titleMetadata {
+.titleFrontmatter {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,7 +36,7 @@
     color: var(--text-header);
 }
 
-.contentMetadata {
+.contentFrontmatter {
     font-size: var(--font-body);
     color: var(--text-secondary);
 }

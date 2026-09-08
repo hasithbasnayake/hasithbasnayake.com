@@ -1,21 +1,25 @@
 import type React from "react";
 
-export interface ToC {
+export interface ToCEntry {
     id: string;
-    name: string;
+    label: string;
+
 }
 
-export interface Metadata {
+export interface PageFrontmatter {
     title: string;
     description: string;
     author: string;
-    toc: ToC[];
+    toc: ToCEntry[];
     date: string;
     category: string;
+
 }
 
 export interface Post {
     slug: string;
-    metadata: Metadata;
+    frontmatter: PageFrontmatter;
     content: React.ComponentType;
 }
+export type PostPreview = Omit<Post, 'content'>;
+

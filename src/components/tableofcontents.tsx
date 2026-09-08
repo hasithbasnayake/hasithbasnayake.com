@@ -1,9 +1,9 @@
-import type {ToC} from "../content/types.ts";
+import type {ToCEntry} from "../content/types.ts";
 import {useState, useEffect} from "react";
 import styles from "./TableOfContents.module.css";
 
 interface TableOfContentsProps {
-    tableofcontents: ToC[];
+    tableofcontents: ToCEntry[];
 }
 
 export default function TableOfContents({tableofcontents}: TableOfContentsProps) {
@@ -35,7 +35,7 @@ export default function TableOfContents({tableofcontents}: TableOfContentsProps)
                             <span className={styles.number}>
                                 {String(index + 1).padStart(2, '0')}
                             </span>
-                            {entry.name}
+                            {entry.label}
                         </a>
                     </li>
                 ))}

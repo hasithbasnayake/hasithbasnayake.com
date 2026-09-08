@@ -1,6 +1,6 @@
 import styles from "./Home.module.css";
 import List from "../components/list.tsx";
-import {PostList} from "../content/index.tsx";
+import {PostList} from "../content";
 
 export default function Home () {
     return (
@@ -17,7 +17,7 @@ export default function Home () {
                 </div>
             </header>
             <section>
-                <List postList={PostList}/>
+                <List postPreviewList={PostList}/>
             </section>
         </div>
     );

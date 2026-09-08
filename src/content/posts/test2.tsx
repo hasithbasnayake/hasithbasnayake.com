@@ -1,9 +1,17 @@
-import type {Metadata} from "../types.ts";
+import type {PageFrontmatter} from "../types.ts";
 
-export const metadata: Metadata = {
+export const frontmatter: PageFrontmatter = {
     title: "This is a test post2",
     description: "This is a test description2",
     author: "Hasith Basnayake",
+    toc: [{
+        id: "caching",
+        label: "Caching",
+    }, {
+        id: "indexing",
+        label: "Indexing",
+    },
+    ],
     date: "09.09.09",
     category: "Project",
 }
