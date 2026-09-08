@@ -1,14 +1,3 @@
-@keyframes fadeIn {
-    0% {
-        transform: translateY(-30px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
-
 .home {
     display: flex;
     flex-direction: column;
@@ -21,7 +10,6 @@
     display: flex;
     flex-direction: row;
     gap: var(--space-6);
-    animation: fadeIn 1s 0s;
 }
 
 .headerLeft {

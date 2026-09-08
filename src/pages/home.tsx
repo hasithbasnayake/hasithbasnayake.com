@@ -13,7 +13,7 @@ export default function Home () {
                         and where I’ve been.</p>
                 </div>
                 <div className={styles.headerRight}>
-                    <p>I recently graduated from the University of California, Santa Barbara where I pursued my own individual major, a B.S. in Computational Neuroscience.
+                    <p>I graduated from the University of California, Santa Barbara where I pursued my own individual major, a B.S. in Computational Neuroscience.
                         I completed a senior thesis in Efficient Image Encoding for Spiking Neural Networks. I currently work as a Product Designer within the Maritime Autonomy division at Anduril Industries. </p>
                 </div>
             </header>

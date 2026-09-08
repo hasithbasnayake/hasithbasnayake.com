@@ -23,7 +23,7 @@ export default function List ({postPreviewList, startAt = 2}: ListProps) {
     const filteredPostPreviewList = filter === "All" ? postPreviewList : postPreviewList.filter(post => post.frontmatter.category === filter);
 
     const renderedPostPreviewList = filteredPostPreviewList.map((post, i) =>
-        <Card frontmatter={post.frontmatter} slug={post.slug} style={slot(i + 1)}/>
+        <Card key={post.slug} frontmatter={post.frontmatter} slug={post.slug} style={slot(i + 1)}/>
     );
 
     return (
