@@ -1,4 +1,4 @@
-import type React from "react";
+import type { ComponentType } from "react";
 
 export interface ToCEntry {
     id: string;
@@ -19,7 +19,7 @@ export interface PageFrontmatter {
 export interface Post {
     slug: string;
     frontmatter: PageFrontmatter;
-    content: React.ComponentType;
+    content: ComponentType;
 }
-export type PostPreview = Omit<Post, 'content'>;
 
+export type PostPreview = Omit<Post, 'content'>;

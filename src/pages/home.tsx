@@ -1,11 +1,12 @@
 import styles from "./Home.module.css";
 import List from "../components/list.tsx";
+import { slot } from "../stagger.ts";
 import {PostList} from "../content";
 
 export default function Home () {
     return (
         <div className={styles.home}>
-            <header className={styles.intro}>
+            <header data-stagger style={slot(0)} className={styles.intro}>
                 <div className={styles.headerLeft}>
                     <h1>Building for human and machine intelligence.</h1>
                     <p>Hey, my name’s Hasith. This is my personal website where I post about the work I’ve been up to, what’s currently piquing my interest,

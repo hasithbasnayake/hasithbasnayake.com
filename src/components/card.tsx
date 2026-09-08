@@ -1,15 +1,17 @@
 import styles from "./Card.module.css";
 import type {PageFrontmatter} from "../content/types.ts";
 import {Link} from "react-router-dom";
+import type {CSSProperties} from "react";
 
 interface CardProps {
     frontmatter: PageFrontmatter;
     slug: string;
+    style?: CSSProperties;
 }
 
-export default function Card ({frontmatter, slug}: CardProps) {
+export default function Card ({frontmatter, slug, style}: CardProps) {
     return (
-        <Link to={`/${slug}`}>
+        <Link to={`/${slug}`} data-stagger style={style}>
             <div className={styles.card}>
                 <div className={styles.cardContent}>
                     <div className={styles.cardContentHeader}>
