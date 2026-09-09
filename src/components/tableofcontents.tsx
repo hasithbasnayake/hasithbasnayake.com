@@ -5,7 +5,7 @@ import Heading from "../components/heading";
 
 interface TableOfContentsProps {
     headerList: HTMLHeadingElement[];
-    activeId: undefined;
+    activeId: string | undefined;
 }
 export default function TableofContents({ headerList, activeId }: TableOfContentsProps) {
     return (
