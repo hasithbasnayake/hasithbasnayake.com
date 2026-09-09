@@ -42,7 +42,7 @@ button {
 
 @font-face {
   font-family: "Inter";
-  src: url('public/fonts/inter-var.woff2') format('woff2');
+  src: url('/fonts/inter-var.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -50,7 +50,7 @@ button {
 
 @font-face {
   font-family: "Geist";
-  src: url('public/fonts/geist-var.woff2') format('woff2');
+  src: url('/fonts/geist-var.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;

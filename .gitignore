@@ -29,5 +29,4 @@ dist-ssr
 .env.*
 !.env.example
 
-#Fonts
-fonts
+# Fonts in public/ are served assets and must be committed.
