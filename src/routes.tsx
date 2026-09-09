@@ -1,6 +1,6 @@
 import Layout from "./components/layout.tsx";
 import Home from "./pages/home.tsx";
-import Post from "./pages/post.tsx";
+import PostPage from "./pages/post.tsx";
 import {PostList} from "./content/index.tsx";
 
 export const routes = [
@@ -11,7 +11,7 @@ export const routes = [
             {index: true, Component: Home},
             {
                 path: ':slug',
-                Component: Post,
+                Component: PostPage,
                 getStaticPaths: () => PostList.map(post => post.slug),
             },
         ],

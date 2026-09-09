@@ -21,9 +21,6 @@ export default function Filter ({filter, setFilter, style}: FilterProps) {
                 <a href="https://github.com/hasithbasnayake" target="_blank" rel="noopener noreferrer" aria-label="Github">
                     <img src={InternetIcon} alt="" width={16} height={16} />
                 </a>
-                <a href="https://github.com/hasithbasnayake" target="_blank" rel="noopener noreferrer" aria-label="Github">
-                    <img src={InternetIcon} alt="" width={16} height={16} />
-                </a>
             </div>
         </div>
     );

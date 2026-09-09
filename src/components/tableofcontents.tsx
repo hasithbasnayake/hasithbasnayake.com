@@ -1,46 +1,16 @@
-import type {ToCEntry} from "../content/types.ts";
-import {useState, useEffect} from "react";
-import styles from "./TableOfContents.module.css";
+// Step 1: We need a simple toc component that will take in an array of headers and map them to heading components, which will simply be a thin wrapper for styling and active state
+// Step 2: We'll need to write a simple function that scans the rendered DOM for h2's and turns them into an array (will use useState and useEFfect
+// Step 3: We'll need to thread that through the toc component and then into the header component
+import Heading from "../components/heading";
 
 interface TableOfContentsProps {
-    tableofcontents: ToCEntry[];
+    headerList: HTMLHeadingElement[];
+    activeId: undefined;
 }
-
-export default function TableOfContents({tableofcontents}: TableOfContentsProps) {
-    const [activeID, setActiveID] = useState(tableofcontents[0]?.id);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const visible = entries.filter(e => e.isIntersecting);
-                if (visible.length > 0) setActiveID(visible[0].target.id);
-            },
-            {rootMargin: "0px 0px -70% 0px"},
-        );
-        tableofcontents.forEach(({id}) => {
-            const el = document.getElementById(id);
-            if (el) observer.observe(el);
-        });
-
-        return () => observer.disconnect();
-
-    }, [tableofcontents]);
-
+export default function TableofContents({ headerList, activeId }: TableOfContentsProps) {
     return (
-        <nav className={styles.toc} aria-label={"Table of Contents"}>
-            <ol className={styles.list}>
-                {tableofcontents.map((entry, index) => (
-                    <li key={entry.id}>
-                        <a href={`#${entry.id}`} className={entry.id === activeID ? styles.active : styles.link}>
-                            <span className={styles.number}>
-                                {String(index + 1).padStart(2, '0')}
-                            </span>
-                            {entry.label}
-                        </a>
-                    </li>
-                ))}
-            </ol>
-        </nav>
-    );
-
+        <>
+            {headerList.map(header => <Heading key={header.id} id={header.id} label={header.textContent} active={activeId}/>)}
+        </>
+    )
 }
