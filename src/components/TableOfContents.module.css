@@ -1,5 +1,5 @@
-nav {
+.toc {
     position: sticky;
     padding-left: 64px;
-    top: 64px;
+    top: 124px;
 }

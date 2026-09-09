@@ -2,6 +2,7 @@
 // Step 2: We'll need to write a simple function that scans the rendered DOM for h2's and turns them into an array (will use useState and useEFfect
 // Step 3: We'll need to thread that through the toc component and then into the header component
 import Heading from "../components/heading";
+import styles from "./TableOfContents.module.css";
 
 interface TableOfContentsProps {
     headerList: HTMLHeadingElement[];
@@ -9,8 +10,8 @@ interface TableOfContentsProps {
 }
 export default function TableofContents({ headerList, activeId }: TableOfContentsProps) {
     return (
-        <>
-            {headerList.map(header => <Heading key={header.id} id={header.id} label={header.textContent} active={activeId}/>)}
-        </>
+        <ol className={styles.toc}>
+            {headerList.map((header, num) => <Heading key={header.id} id={header.id} number={num + 1} label={header.textContent} active={activeId}/>)}
+        </ol>
     )
 }

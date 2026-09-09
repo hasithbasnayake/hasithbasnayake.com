@@ -149,4 +149,8 @@ h1 {
 
 h2 {
   scroll-margin-top: var(--space-4);
+  font-family: var(--sans);
+  font-size: var(--font-body);
+  color: var(--text-header);
+  font-weight: var(--weight-header);
 }

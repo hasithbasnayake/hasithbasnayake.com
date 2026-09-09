@@ -6,6 +6,7 @@
 .toc {
     grid-column: 1;
 }
+
 .postPage {
     grid-column: 2;
     display: flex;
@@ -38,7 +39,7 @@
 
 .contentFrontmatter {
     font-size: var(--font-body);
-    color: var(--text-secondary);
+    color: var(--text-body);
 }
 
 .divider {

@@ -4,6 +4,7 @@ import styles from "./Post.module.css";
 import {useEffect, useRef, useState} from "react";
 import TableofContents from "../components/tableofcontents.tsx";
 import type { Dispatch, SetStateAction } from "react"
+import { slot, offset } from "../stagger.ts";
 
 
 
@@ -98,12 +99,13 @@ export default function PostPage () {
     else {
         const Content = post.content;
         return (
-            <div className={styles.post}>
-                <div className={styles.toc}>
+            <div className={styles.post} data-stagger style={offset(0)}>
+                <div className={styles.toc} data-stagger style={slot(0)}>
+                    <TableofContents headerList={headers} activeId={activeId}/>
                 </div>
                 <section className={styles.postPage}>
                     <div className={styles.postContent}>
-                        <div className={styles.title}>
+                        <div className={styles.title} data-stagger style={slot(0)}>
                             <p className={styles.headerText}>
                                 {post.frontmatter.title}
                             </p>
@@ -117,7 +119,6 @@ export default function PostPage () {
                             </div>
                             <div className={styles.divider}></div>
                         </div>
-                        <TableofContents headerList={headers} activeId={activeId}/>
                         <Content/>
                     </div>
                 </section>

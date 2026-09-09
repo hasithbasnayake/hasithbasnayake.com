@@ -1,0 +1,32 @@
+.item {
+    border-left: 2px solid #F0EFEF;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 6px var(--space-4);
+    color: #8B9091;
+    font-family: var(--heading);
+    font-size: var(--font-body);
+    font-weight: var(--weight-header);
+}
+
+.number {
+    color: #8A8A8A;
+    font-variant-numeric: tabular-nums;
+    font-size: 12px;
+}
+
+.active {
+    border-left-color: #0088F9;
+}
+
+.active .number {
+    color: var(--text-header);
+}
+
+.active .link {
+    color: var(--text-header);
+}
