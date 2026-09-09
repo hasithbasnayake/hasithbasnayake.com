@@ -99,9 +99,9 @@ export default function PostPage () {
     else {
         const Content = post.content;
         return (
-            <div className={styles.post} data-stagger style={offset(0)}>
-                <div className={styles.toc} data-stagger style={slot(0)}>
-                    <TableofContents headerList={headers} activeId={activeId}/>
+            <div className={styles.post} style={offset(0)}>
+                <div className={styles.toc}>
+                    <TableofContents headerList={headers} activeId={activeId} style={slot(2)}/>
                 </div>
                 <section className={styles.postPage}>
                     <div className={styles.postContent}>
@@ -119,7 +119,9 @@ export default function PostPage () {
                             </div>
                             <div className={styles.divider}></div>
                         </div>
-                        <Content/>
+                        <div className={styles.body} data-stagger style={slot(1)}>
+                            <Content/>
+                        </div>
                     </div>
                 </section>
             </div>

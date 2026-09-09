@@ -3,14 +3,16 @@
 // Step 3: We'll need to thread that through the toc component and then into the header component
 import Heading from "../components/heading";
 import styles from "./TableOfContents.module.css";
+import type { CSSProperties } from "react";
 
 interface TableOfContentsProps {
     headerList: HTMLHeadingElement[];
     activeId: string | undefined;
+    style?: CSSProperties;
 }
-export default function TableofContents({ headerList, activeId }: TableOfContentsProps) {
+export default function TableofContents({ headerList, activeId, style }: TableOfContentsProps) {
     return (
-        <ol className={styles.toc}>
+        <ol className={styles.toc} data-stagger style={style}>
             {headerList.map((header, num) => <Heading key={header.id} id={header.id} number={num + 1} label={header.textContent} active={activeId}/>)}
         </ol>
     )
