@@ -35,7 +35,9 @@ export default function PostContent () {
                 It was a cool experience. The site is built entirely with React and Typescript. I got to learn a lot about what goes into building even a simple site.
                 How to think about site architecture, defining shared types, eliminating redundancy, creating a portable design system, and more.  <br></br><br></br>
 
-                Now that this site is up, my hope is that I'll be a bit more active on posting my projects and work here. Stay tuned!
+                Now that this site is up, my hope is that I'll be a bit more active on posting my projects and work here. Stay tuned! <br></br><br></br>
+
+                - Hasith Basnayake
             </p>
         </>
     );
