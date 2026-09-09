@@ -101,7 +101,7 @@ export default function PostPage () {
         return (
             <div className={styles.post} style={offset(0)}>
                 <div className={styles.toc}>
-                    <TableofContents headerList={headers} activeId={activeId} style={slot(2)}/>
+                    <TableofContents headerList={headers} activeId={activeId} style={slot(1)}/>
                 </div>
                 <section className={styles.postPage}>
                     <div className={styles.postContent}>
@@ -119,7 +119,7 @@ export default function PostPage () {
                             </div>
                             <div className={styles.divider}></div>
                         </div>
-                        <div className={styles.body} data-stagger style={slot(1)}>
+                        <div className={styles.body} data-stagger-children style={offset(1)}>
                             <Content/>
                         </div>
                     </div>

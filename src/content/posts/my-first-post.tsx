@@ -13,7 +13,7 @@ export const frontmatter: PageFrontmatter = {
         label: "Goals",
     },
     ],
-    date: "09.07.26",
+    date: "09.09.26",
     category: "Blog",
 }
 
@@ -32,17 +32,11 @@ export default function PostContent () {
 
                 My old portfolio was hosted on Framer, and the one before that on Webflow. I think my first ever portfolio was a PDF. This is the first time I've attempted to create one fully from scratch. <br></br><br></br>
 
-                It was a cool experience. The site is built entirely with React and Typescript. I tried to use as minimal AI as possible, and I got to learn a lot about what goes into building even a simple site.
+                It was a cool experience. The site is built entirely with React and Typescript. I got to learn a lot about what goes into building even a simple site.
                 How to think about site architecture, defining shared types, eliminating redundancy, creating a portable design system, and more.  <br></br><br></br>
-
-                Here's a timelapse of me building the table of contents sidebar on this page. <br></br><br></br>
 
                 Now that this site is up, my hope is that I'll be a bit more active on posting my projects and work here. Stay tuned!
             </p>
-            <div className={styles.h2wrapper}>
-                <p className={styles.number}>2</p>
-                <h2 id="2" >Video</h2>
-            </div>
         </>
     );
 }

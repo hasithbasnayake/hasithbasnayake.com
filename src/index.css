@@ -120,15 +120,26 @@ button {
   to   { opacity: 1; transform: none; }
 }
 
-[data-stagger] {
+[data-stagger],
+[data-stagger-children] > * {
   animation: fade-up var(--stagger-duration) cubic-bezier(0.33, 1, 0.68, 1) both;
   animation-delay: calc(
           min(var(--slot) + var(--offset), var(--stagger-max)) * var(--stagger-step)
   );
 }
 
+/* Children of a staggered container get their slot from their position.
+   Past nth-child(5) the min() above clamps them all to --stagger-max. */
+[data-stagger-children] > *              { --slot: var(--stagger-max); }
+[data-stagger-children] > *:nth-child(1) { --slot: 1; }
+[data-stagger-children] > *:nth-child(2) { --slot: 2; }
+[data-stagger-children] > *:nth-child(3) { --slot: 3; }
+[data-stagger-children] > *:nth-child(4) { --slot: 4; }
+[data-stagger-children] > *:nth-child(5) { --slot: 5; }
+
 @media (prefers-reduced-motion: reduce) {
-  [data-stagger] { animation: none; }
+  [data-stagger],
+  [data-stagger-children] > * { animation: none; }
 }
 
 p {
