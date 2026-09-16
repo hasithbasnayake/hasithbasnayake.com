@@ -1,6 +1,6 @@
 import {Outlet} from "react-router-dom";
 import styles from "./Layout.module.css";
-import { Analytics } from "@vercel/analytics"
+import { Analytics } from "@vercel/analytics/react"
 
 
 export default function Layout() {
