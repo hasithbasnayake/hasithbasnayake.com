@@ -54,3 +54,16 @@
     margin-top: var(--space-2);
     background-color: #F0EFEF;
 }
+
+@media (max-width: 1200px) {
+    .toc {
+        display: none;
+    }
+    .post {
+        display: flex;
+        flex-direction: column;
+        max-width: 664px;
+        padding: 0 32px;
+        margin-inline: auto;
+    }
+}
