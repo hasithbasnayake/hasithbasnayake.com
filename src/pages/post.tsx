@@ -7,7 +7,6 @@ import type { Dispatch, SetStateAction } from "react"
 import { slot, offset } from "../stagger.ts";
 
 
-
 export default function PostPage () {
     const [headers, setHeaders] = useState<HTMLHeadingElement[]>([]);
 

@@ -3,6 +3,7 @@ import { routes } from './routes';
 import './index.css';
 import './content/index.tsx';
 
+
 export const createRoot = ViteReactSSG({ routes });
 
 /*
