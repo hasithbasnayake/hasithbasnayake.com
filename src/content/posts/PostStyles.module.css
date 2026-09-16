@@ -11,3 +11,19 @@
     font-weight: var(--weight-header);
     color: var(--text-header);
 }
+
+.playerwrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.playerwrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 2px #ffffff30;
+    pointer-events: none;
+}
