@@ -38,7 +38,7 @@ export default function PostContent () {
 
             </p>
             <div className={styles.playerwrapper}>
-                <ReactPlayer src="https://ujoco4f6nmc9bkmu.public.blob.vercel-storage.com/IMG_8330.mp4" playing={true} muted={true} loop={true} style={{
+                <ReactPlayer src="https://ujoco4f6nmc9bkmu.public.blob.vercel-storage.com/IMG_8330.mp4" playsInline={true} playing={true} muted={true} loop={true} style={{
                     width: "100%",
                     height: "100%",
                 }}
