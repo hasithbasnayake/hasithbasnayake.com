@@ -26,7 +26,7 @@ export default function PostContent () {
                 <h2 id="1" >Introduction</h2>
             </div>
             <p>
-                One of the perks of being a designer is that refreshing one's portfolio is almost a tradition. Oftentimes a portfolio refresh comes about due to a new job, a new project, or simply a desire for some change.  <br></br><br></br>
+                One of the perks of working in software is that refreshing one's portfolio is almost a tradition. Oftentimes a portfolio refresh comes about due to a new job, a new project, or simply a desire for some change.  <br></br><br></br>
 
                 This time around, I opted to redesign my portfolio for those reasons, and one more. As my work begins to span both design and engineering, I wanted a new surface to capture work that was a bit more interdisciplinary.
                 That read less like a case study, and more like a blog. <br></br><br></br>
